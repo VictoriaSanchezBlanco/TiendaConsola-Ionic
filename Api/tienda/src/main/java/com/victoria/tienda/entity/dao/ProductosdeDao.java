@@ -4,7 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.victoria.tienda.entity.models.Productos;
 
-
 public interface ProductosdeDao extends CrudRepository<Productos, Long> {
-	public Productos findByCategoria(String categoria);
+	
 }

@@ -19,23 +19,14 @@ public class ProductosServicesImple implements ProductosServices {
 	
 	@Override
 	public Productos get(long id) {
-		
 		return productosDao.findById(id).get();
 	}
 	
-	@Override
-	public Productos get(String categoria) {
-		
-		return productosDao.findByCategoria(categoria);
-	}
-
 	@Override
 	public List<Productos> getAll() {
 		return (List<Productos>) productosDao.findAll();
 	}
 	
-	
-
 	@Override
 	public void post(Productos tienda_productos) {
 		productosDao.save(tienda_productos);

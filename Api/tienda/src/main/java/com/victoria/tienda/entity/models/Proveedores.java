@@ -10,9 +10,12 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@CrossOrigin(origins= {"http://localhost:8080","*"})
 @Entity
 @Table(name = "tienda_proveedores")
+
 public class Proveedores implements Serializable {
 	
 private static final long serialVersionUID = 1L;

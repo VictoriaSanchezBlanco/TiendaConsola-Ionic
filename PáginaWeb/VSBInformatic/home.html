@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <a class="navbar-brand" href="#">VSBInformática</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="shops.html">Shops</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="moviles.html">Mobiles</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="computersparts.html" id="navbardrop" data-toggle="dropdown">
+          Computers parts</a>
+          <div class="dropdown-menu bg-dark">
+            <a class="dropdown-item" href="placabaseintel.html">Intel motherboard</a>
+            <a class="dropdown-item" href="placabaseAmd.html">AMD motherboard</a>
+            <a class="dropdown-item" href="memoriaram.html">Ram</a>
+            <a class="dropdown-item" href="tarjetagraf.html">Graphic card</a>
+            <a class="dropdown-item" href="torres.html">Tower</a>
+            <a class="dropdown-item" href="proceintel.html">Intel processor</a>
+            <a class="dropdown-item" href="proceamd.html">AMD processor</a>
+            <a class="dropdown-item" href="ventiladores.html">Fans</a>
+            <a class="dropdown-item" href="fuenteali.html">Power supply</a>
+            <a class="dropdown-item" href="tarjetasonido.html">Sound cards</a>
+            <a class="dropdown-item" href="lectores.html">Card readers</a>
+          </div>
+          </li>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a class="nav-link" href="singin.html">Sing In</a></li>
+          <li><a class="nav-link" href="login.html">Log In</a></li>
+          </ul>
+          </ul>
+          </div>
+    </nav>
+
+    <br/>
+    <br/>
+
+    <div class="container">
+      <div class="jumbotron" id="jumbotron">
+        <h1 class="text-sm-center" id="jumbo">VSBInformática</h1>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="container">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/portada.jpg" class="rounded" alt="portada" id="carrousel1">
+          </div>
+          <div class="carousel-item">
+            <img src="img/portada1.jpg" class="rounded" alt="portada1" id="carrousel2">
+          </div>
+          <div class="carousel-item">
+            <img src="img/portada3.jpg" class="rounded" alt="portada3" id="carrousel3">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+
+  </body>
+  </html>
