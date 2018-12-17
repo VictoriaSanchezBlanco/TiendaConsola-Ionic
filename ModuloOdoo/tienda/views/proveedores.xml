@@ -1,0 +1,87 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="tienda.lista_prover_tree">
+      <field name="name">tienda.prover.tree</field>
+      <field name="model">tienda.proveedores</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="nif"/>
+          <field name="sexo"/>
+          <field name="direccion"/>
+          <field name="telefono"/>
+          <field name="movil"/>
+          <field name="email"/>
+          <field name="comentario"/>   
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="tienda.lista_prover_form">
+      <field name="name">tienda.prover.form</field>
+      <field name="model">tienda.proveedores</field>
+      <field name="arch" type="xml">
+        <form string="listado de empleados">
+          <sheet>
+            <separator string="Datos Personales" colspan="2"/>
+            <group colspan="4" col="4">
+              <field name="name"/>
+              <field name="nif"/>
+              <field name="sexo"/>
+              <field name="direccion"/>
+              <field name="telefono"/>
+              <field name="movil"/>
+            </group>
+            <separator string="Otros Datos" colspan="2"/>
+            <group colspan="4" col="4">
+              <field name="email"/>
+              <field name="comentario"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="tienda.action_window_prover">
+      <field name="name">ventana de los proveedores</field>
+      <field name="res_model">tienda.proveedores</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="contabilidad.action_server">
+      <field name="name">contabilidad server</field>
+      <field name="model_id" ref="model_contabilidad_contabilidad"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Tienda Informática" id="tienda.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Acceso" id="tienda.proveedores" parent="tienda.menu_root"/>
+
+
+    <!-- actions -->
+
+    <menuitem name="Proveedores" id="tienda.lista_prover" parent="tienda.proveedores"
+              action="tienda.action_window_prover"/>
+
+
+  </data>
+</odoo>

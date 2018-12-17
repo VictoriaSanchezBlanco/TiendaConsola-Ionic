@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Proveedores Update</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form #proveedorForm="ngForm" (ngSubmit)="save(proveedorForm.value)">
+        <ion-row>
+            <ion-col>
+              <ion-list inset>
+                <ion-item>
+                    <ion-input placeholder="name" name="name" type="text" required [(ngModel)]="proveedores.name" #name></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="nif" name="nif" type="text" required [(ngModel)]="proveedores.nif" #nif></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="direccion" name="direccion" type="text" required [(ngModel)]="proveedores.direccion" #direccion></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="sexo" name="sexo" type="text" required [(ngModel)]="proveedores.sexo" #sexo></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="email" name="email" type="text" required [(ngModel)]="proveedores.email" #email></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="comentario" name="comentario" type="text" required [(ngModel)]="proveedores.comentario" #comentario></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input placeholder="telefono" name="telefono" type="number" required [(ngModel)]="proveedores.telefono" #telefono></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="movil" name="movil" type="number" required [(ngModel)]="proveedores.movil" #movil></ion-input>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+      <ion-row>
+        <ion-col>
+          <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+          <button ion-button color="primary" full type="submit" [disabled]="!proveedorForm.form.valid">Save</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-content>

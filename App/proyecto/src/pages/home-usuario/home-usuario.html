@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>Users List</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="createUsers()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+  
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let usuarios of usuarios">
+      <ion-item text-wrap>
+        <h2>{{usuarios.name}}</h2>
+        <p>Nif: {{usuarios.nif}}</p>
+        <p>Address: {{usuarios.direccion}}</p>
+        <p>Gender: {{usuarios.sexo}}</p>
+        <p>Email: {{usuarios.email}}</p>
+        <p>Comments: {{usuarios.comentario}}</p>
+        <p>Telephone: {{usuarios.telefono}}</p>
+        <p>Mobile: {{usuarios.movil}}</p>
+        <p>Username: {{usuarios.username}}</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="primary" (click)="updateUsers(usuarios)">
+          <ion-icon name="create"></ion-icon> Update
+        </button>
+        <button ion-button color="danger" (click)="deleteUsuarioById(usuarios.id)">
+          <ion-icon name="trash"></ion-icon> Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

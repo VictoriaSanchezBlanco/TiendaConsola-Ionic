@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Users Update</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form #usuarioForm="ngForm" (ngSubmit)="save(usuarioForm.value)">
+        <ion-row>
+            <ion-col>
+              <ion-list inset>
+                <ion-item>
+                    <ion-input placeholder="name" name="name" type="text" required [(ngModel)]="usuario.name" #name></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="nif" name="nif" type="text" required [(ngModel)]="usuario.nif" #nif></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="direccion" name="direccion" type="text" required [(ngModel)]="usuario.direccion" #direccion></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="sexo" name="sexo" type="text" required [(ngModel)]="usuario.sexo" #sexo></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="email" name="email" type="text" required [(ngModel)]="usuario.email" #email></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="comentario" name="comentario" type="text" required [(ngModel)]="usuario.comentario" #comentario></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input placeholder="telefono" name="telefono" type="number" required [(ngModel)]="usuario.telefono" #telefono></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="movil" name="movil" type="number" required [(ngModel)]="usuario.movil" #movil></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="username" name="username" type="text" required [(ngModel)]="usuario.username" #username></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="password" name="password" type="text" required [(ngModel)]="usuario.password" #password></ion-input>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+      <ion-row>
+        <ion-col>
+          <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+          <button ion-button color="primary" full type="submit" [disabled]="!usuarioForm.form.valid">Save</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-content>

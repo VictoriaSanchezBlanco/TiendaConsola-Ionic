@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Productos Update</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #productosForm="ngForm" (ngSubmit)="save(productosForm.value)">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item>
+            <ion-input placeholder="name" name="name" type="text" required [(ngModel)]="productos.name" #name></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="categoria" name="categoria" type="text" required [(ngModel)]="productos.categoria"
+              #categoria></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="descripcion" name="descripcion" type="text" required [(ngModel)]="productos.descripcion"
+              #direccion></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="precio" name="precio" type="number" required [(ngModel)]="productos.precio" #precio></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="id" name="id" type="number" required [(ngModel)]="productos.id" #id></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+        <button ion-button color="primary" full type="submit" [disabled]="!productosForm.form.valid">Save</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
