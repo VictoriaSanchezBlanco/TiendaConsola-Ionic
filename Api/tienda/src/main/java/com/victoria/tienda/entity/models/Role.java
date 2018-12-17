@@ -11,6 +11,9 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotEmpty;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+@CrossOrigin(origins= {"http://localhost:8080","*"})
 @Entity
 @Table(name = "tienda_roles", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "roles"})})
 public class Role implements Serializable {

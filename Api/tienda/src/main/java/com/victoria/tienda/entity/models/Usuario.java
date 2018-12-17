@@ -23,6 +23,9 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+@CrossOrigin(origins= {"http://localhost:8080","*"})
 @Entity
 @Table(name = "tienda_usuarios")
 

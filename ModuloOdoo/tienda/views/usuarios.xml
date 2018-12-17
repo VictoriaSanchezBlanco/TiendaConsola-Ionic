@@ -1,0 +1,96 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="tienda.lista_usu_tree">
+      <field name="name">tienda.usu.tree</field>
+      <field name="model">tienda.usuarios</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="nif"/>
+          <field name="sexo"/>
+          <field name="direccion"/>
+          <field name="telefono"/>
+          <field name="movil"/>
+          <field name="email"/>
+          <field name="comentario"/>
+          <field name="username"/>
+          <field name="password"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="tienda.lista_usu_form">
+      <field name="name">tienda.usu.form</field>
+      <field name="model">tienda.usuarios</field>
+      <field name="arch" type="xml">
+        <form string="listado de empleados">
+          <sheet>
+            <separator string="Datos Personales" colspan="2"/>
+            <group colspan="4" col="4">
+              <field name="name"/>
+              <field name="nif"/>
+              <field name="sexo"/>
+              <field name="direccion"/>
+              <field name="telefono"/>
+              <field name="movil"/>
+            </group>
+            <separator string="Otros Datos" colspan="2"/>
+            <group colspan="4" col="4">
+              <field name="email"/>
+              <field name="comentario"/>
+            </group>
+            <separator string="Datos para Login" colspan="2"/>
+            <group colspan="4" col="4">
+              <field name="username"/>
+              <field name="password"/>
+            </group>
+            <field name="productos_ids"/>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="tienda.action_window_usu">
+      <field name="name">ventana de los usuarios</field>
+      <field name="res_model">tienda.usuarios</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="contabilidad.action_server">
+      <field name="name">contabilidad server</field>
+      <field name="model_id" ref="model_contabilidad_contabilidad"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Tienda Informática" id="tienda.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Acceso" id="tienda.usuarios" parent="tienda.menu_root"/>
+    
+
+    <!-- actions -->
+
+    <menuitem name="Usuarios" id="tienda.lista_usu" parent="tienda.usuarios"
+              action="tienda.action_window_usu"/>
+
+
+  </data>
+</odoo>

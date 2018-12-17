@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>Movil List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding text-center>
+  <ion-list>
+          <ion-item-sliding *ngFor="let moviles of moviles">
+              <ion-item  text-wrap>
+                <h2>{{moviles.name}}</h2>
+                <p>Description: {{moviles.descripcion}}</p>
+                <p>Price: {{moviles.precio}}</p>
+              </ion-item>
+          </ion-item-sliding>
+  </ion-list>
+</ion-content>

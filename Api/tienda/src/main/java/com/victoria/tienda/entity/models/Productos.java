@@ -45,25 +45,12 @@ public class Productos implements Serializable {
 	@NotNull
 	private Double precio;
 	
-	/*@Column(name = "image")
-	@Type(type="org.hibernate.type.BinaryType") 
-
-	private byte[] image;*/
-	
 	@ManyToMany(fetch = FetchType.LAZY,
             cascade = {
                 CascadeType.PERSIST,
                 CascadeType.MERGE
-            })
-            
+            }, mappedBy = "productos")
     private Set<Usuario> usuario = new HashSet<>();
-	
-	/*public byte[] getImage() {
-		return image;
-	}
-	public void setImage(byte[] image) {
-		this.image = image;
-	}*/
 	
 	public long getId() {
 		return id;
@@ -77,7 +64,6 @@ public class Productos implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 	public String getCategoria() {
 		return categoria;
 	}
@@ -106,6 +92,7 @@ public class Productos implements Serializable {
 		this.descripcion = descripcion;
 		this.precio = precio;
 	}
+	
 	public Productos() {
 		
 	}
