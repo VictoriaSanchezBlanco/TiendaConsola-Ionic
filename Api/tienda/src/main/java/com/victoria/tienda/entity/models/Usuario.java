@@ -25,7 +25,7 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-@CrossOrigin(origins= {"http://localhost:8080","*"})
+@CrossOrigin(origins= {"*"})
 @Entity
 @Table(name = "tienda_usuarios")
 

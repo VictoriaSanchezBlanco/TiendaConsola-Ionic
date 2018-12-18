@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.victoria.tienda.entity.models.Productos;
 import com.victoria.tienda.entity.services.ProductosServices;
-@CrossOrigin(origins={"*","http://localhost:8080"})
+@CrossOrigin(origins="*")
 @RestController
 
 public class ProductosController {
