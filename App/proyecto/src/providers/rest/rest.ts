@@ -303,19 +303,19 @@ export class RestProvider {
   //   .catch(error => Promise.reject(error));
   // }
 
-  // create(rest: any){
-  //   let sql = 'INSERT INTO productos(name, categoria, descripcion, precio) VALUES(?,?)';
-  //   return this.db_local.executeSql(sql, [rest.name, rest.categoria,rest.descripcion,rest.precio]);
-  // }
+  //  create(rest: any){
+  //    let sql = 'INSERT INTO productos(name, categoria, descripcion, precio) VALUES(?,?)';
+  //    return this.db_local.executeSql(sql, [rest.name, rest.categoria,rest.descripcion,rest.precio]);
+  //  }
 
-  // update(rest: any){
-  //   let sql = 'UPDATE productos SET name=?, categoria=?, descripcion=?, precio=?';
-  //   return this.db_local.executeSql(sql, [rest.name, rest.nif,rest.direccion,rest.sexo,rest.email,rest.comentario,rest.telefono,rest.movil,rest.username,rest.password,rest.id]);
-  // }
+  //  update(rest: any){
+  //    let sql = 'UPDATE productos SET name=?, categoria=?, descripcion=?, precio=?';
+  //    return this.db_local.executeSql(sql, [rest.name, rest.nif,rest.direccion,rest.sexo,rest.email,rest.comentario,rest.telefono,rest.movil,rest.username,rest.password,rest.id]);
+  //  }
 
-  // delete(rest: any){
-  //   let sql = 'DELETE FROM productos WHERE id=?';
-  //   return this.db_local.executeSql(sql, [rest.id]);
+  //  delete(rest: any){
+  //    let sql = 'DELETE FROM productos WHERE id=?';
+  //    return this.db_local.executeSql(sql, [rest.id]);
   // }
 }
 

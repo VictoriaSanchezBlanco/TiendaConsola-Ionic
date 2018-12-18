@@ -113,17 +113,17 @@
         </ion-item>
       </ion-slide>
       <ion-slide>
-          <ion-item-sliding *ngFor="let productos of productos">
+          <ion-item-sliding *ngFor="let producto of productos">
               <ion-item  text-wrap>
-                <h2>{{productos.name}}</h2>
-                <p>Category: {{productos.categoria}}</p>
-                <p>Description: {{productos.descripcion}}</p>
-                <p>Price: {{productos.precio}}</p>
+                <h2>{{producto.name}}</h2>
+                <p>Category: {{producto.categoria}}</p>
+                <p>Description: {{producto.descripcion}}</p>
+                <p>Price: {{producto.precio}}</p>
                 <ion-slide>
-                  <button ion-button color="primary" (click)="updateProducts(productos)">
+                  <button ion-button color="primary" (click)="updateProducts(producto)">
                     <ion-icon name="create"></ion-icon> Update
                   </button>
-                  <button ion-button color="danger" (click)="deleteProductsById(productos.id)">
+                  <button ion-button color="danger" (click)="deleteProductsById(producto.id)">
                     <ion-icon name="trash"></ion-icon> Delete
                   </button>
                 </ion-slide>

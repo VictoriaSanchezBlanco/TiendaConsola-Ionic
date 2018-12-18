@@ -1,41 +1,27 @@
-<ion-header padding center text-center>
+<ion-header padding center>
     <ion-navbar color="primary">
-      <ion-title>Log In</ion-title>
+
     </ion-navbar>
   </ion-header>
   
 
-  <!-- <ion-content padding center text-center>
-    <ion-title>Log In</ion-title>
-    <ion-list>
-      <ion-item>
-        <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input placeholder="Contraseña" type="password" [(ngModel)]="password"></ion-input>
-      </ion-item>
-    </ion-list>
-    <button (click)="login()" type="submit" ion-button full>Log In</button>
-  </ion-content> -->
-
   <ion-content>
       <form [formGroup]="myForm" (ngSubmit)="saveData()">
         <ion-list>
+            <ion-title text-center>Log In</ion-title>
             <ion-item>
                 <ion-icon name="person" item-start></ion-icon>
                 <ion-label stacked>Username:</ion-label>
                 <ion-input formControlName="username" type="text" placeholder="username"></ion-input>
               </ion-item>
-              <div formGroupName="passwordRetry">
                 <ion-item>
                   <ion-icon name="eye" item-start></ion-icon>
                   <ion-label stacked>Password:</ion-label>
                   <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
                 </ion-item>
-                </div>
               </ion-list>
               <div padding>
-                <button ion-button block type="submit" [disabled]="!myForm.valid" (click)="access">Save</button>
+                <button ion-button block type="submit" [disabled]="!myForm.valid" (click)="gotoAccess()">Save</button>
               </div>
             </form>
           </ion-content>

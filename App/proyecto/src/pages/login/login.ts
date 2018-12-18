@@ -25,14 +25,12 @@ export class LoginPage {
   private createLogin(){
     return this.formBuilder.group({
       username: ['', Validators.required],
-      passwordRetry: this.formBuilder.group({
-        password: ['', Validators.required],
-      }),
-      gender: ['', Validators.required],
-    });
-  }
+      password: ['', Validators.required],
+      })
 
-  access(){
+    };
+
+  gotoAccess(){
     this.navCtrl.push(TabsPage);
   }
 
